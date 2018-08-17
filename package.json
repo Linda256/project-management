@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build" : "webpack --mode production"
+    "build": "webpack --mode production"
   },
   "author": "Linda Wang",
   "license": "ISC",
   "dependencies": {
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
