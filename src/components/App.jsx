@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDom from "react-dom";
 import Projects from "./Projects.jsx"
 import AddProject from "./AddProject.jsx"
+//import AddProject2 from "./AddProject2.jsx"
 import uuid from 'uuid';
 
 class App extends Component {
@@ -28,7 +29,7 @@ class App extends Component {
       {
         id: uuid.v4(),
         title:'MVP',
-        category: 'Blog development'
+        category: 'Web design'
       }
       ]}
       )
@@ -42,16 +43,23 @@ class App extends Component {
   this.setState({projects});
  }
 
- addProject(title, category){
-  let newProject = {
-    id:uuid.v4(),
-    title,
-    category
+ // addHandler(title, category){
+ //  let newProject = {
+ //    id:uuid.v4(),
+ //    title:title,
+ //    category:category
+ //  }
+ //  let projects = this.state.projects;
+ //  projects.push(newProject);
+ //  this.setState({projects});
+ // }
+
+ addHandler(project){
+    let projects = this.state.projects;
+    projects.push(project);
+    this.setState({projects})
   }
-  let projects = this.state.projects;
-  projects.push(newProject);
-  this.setState({projects});
- }
+
 
 componentWillMount(){
   this.getProjects();
